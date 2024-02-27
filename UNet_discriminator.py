@@ -189,11 +189,14 @@ class DiscriminatorOutputProjection(nn.Module):
     def forward(self, x: Tensor) -> Tensor:
         x = F.silu(self.norm1(self.conv1(x)))
         x = F.silu(self.norm2(self.conv2(x)))
-        x = F.silu(self.norm3(self.conv3(x)))
-        x = F.adaptive_avg_pool2d(x, (1))
-        x = x.view(x.size(0), -1)  # Flatten for fully connected layer
+        x = self.conv3(x)
         x = nn.Sigmoid()(x)
-        x = x.squeeze(dim=1)
+        
+#        x = F.silu(self.norm3(self.conv3(x)))
+#        x = F.adaptive_avg_pool2d(x, (1))
+#        x = x.view(x.size(0), -1)  # Flatten for fully connected layer
+#        x = nn.Sigmoid()(x)
+#        x = x.squeeze(dim=1)
         return x
 
 # Unet
