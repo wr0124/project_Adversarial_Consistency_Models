@@ -41,3 +41,67 @@ The repository also contains experiments with binary masks for localized generat
 ├── options.py                 # Command-line configuration
 ├── utils.py                   # Utility functions
 └── run_cm_d.sh                # Example training command
+
+```
+
+## Technologies
+
+Python · PyTorch · TorchVision · Consistency Models · Generative AI · Adversarial Training · U-Net · Computer Vision · Visdom · FID
+
+## Running an experiment
+
+The example training configuration is provided in:
+
+```bash
+run_cm_d.sh
+```
+
+Before running it, update the dataset paths and GPU configuration for your environment.
+
+The training script supports options such as:
+
+```text
+--data_dir
+--test_data_dir
+--image_size
+--batch_size
+--max_steps
+--lr
+--iter_size
+--device_cuda
+```
+
+Example:
+
+```bash
+python3 cm_d.py \
+  --data_dir /path/to/train/data \
+  --test_data_dir /path/to/test/data \
+  --image_size 64 64 \
+  --batch_size 8 \
+  --max_steps 200000 \
+  --lr 1e-4 \
+  --device_cuda cuda:0
+```
+
+## Evaluation
+
+The experimental pipeline includes:
+
+- visual inspection of generated samples
+- consistency sampling at multiple noise levels
+- Fréchet Inception Distance (FID) evaluation on test data
+- tracking of generator, discriminator, and consistency losses
+
+## Status
+
+This repository contains **research and experimental code** developed for exploring adversarial consistency models. It is not intended as a production-ready library.
+
+## Author
+
+**Ru Wang Pujos**
+
+Machine Learning R&D Engineer  
+Computer Vision · Deep Learning · Generative AI
+
+Portfolio: https://wr0124.github.io/
