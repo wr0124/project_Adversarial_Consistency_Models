@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Model artifacts
+checkpoints/
+*.ckpt
+*.pth
+*.pt
+
+# Experiment outputs
+results/
+outputs/
+loss_*.txt
+fid_*.txt
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
