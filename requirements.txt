@@ -1,0 +1,8 @@
+torch
+torchvision
+numpy
+einops
+torchinfo
+tqdm
+visdom
+torcheval
