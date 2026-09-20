@@ -48,6 +48,12 @@ The repository also contains experiments with binary masks for localized generat
 
 Python · PyTorch · TorchVision · Consistency Models · Generative AI · Adversarial Training · U-Net · Computer Vision · Visdom · FID
 
+### Installation
+
+```bash
+pip install -r requirements.txt
+
+
 ## Running an experiment
 
 The example training configuration is provided in:
